@@ -1,6 +1,6 @@
-# 记工排班隐私政策
+# 记薪排班隐私政策
 
-这是 `记工排班` HarmonyOS App 的公开隐私政策托管仓库。
+这是 `记薪排班` HarmonyOS App 的公开隐私政策托管仓库。
 
 - App 包名：`com.mikehot.workshiftpay`
 - 隐私政策页面：`index.html`
