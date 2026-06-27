@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>记工排班隐私政策</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #172033;
+      --muted: #5f6b7a;
+      --line: #e6ebf0;
+      --brand: #007d78;
+      --bg: #f6f8fb;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.72;
+    }
+
+    main {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      padding: 32px 18px 56px;
+    }
+
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      line-height: 1.25;
+    }
+
+    h2 {
+      margin: 30px 0 10px;
+      font-size: 20px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    code {
+      padding: 2px 5px;
+      border-radius: 5px;
+      background: #eef3f7;
+      color: #263244;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.95em;
+    }
+
+    .meta {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .notice {
+      border-left: 4px solid var(--brand);
+      background: #edf8f7;
+      padding: 12px 14px;
+      border-radius: 8px;
+      color: #1f4f4d;
+    }
+
+    @media (max-width: 640px) {
+      main {
+        padding: 18px 12px 36px;
+      }
+
+      article {
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <article>
+      <h1>记工排班隐私政策</h1>
+      <p class="meta">生效日期：2026-06-27</p>
+      <p class="notice">记工排班第一版是本地记工、排班和工资核对工具，不需要账号，不接入后端，不上传工时、工资、排班和备注数据。</p>
+
+      <p>记工排班是一个面向小时工、临时工、兼职和倒班人群的本地记工、排班和工资核对工具。我们重视用户的工时、工资和排班信息。本政策说明第一版 App 如何处理数据和权限。</p>
+
+      <h2>一、我们如何收集和使用信息</h2>
+      <p>第一版 App 不需要注册账号，不接入后端服务，不上传用户的工时、工资、排班、备注或工资规则。</p>
+      <p>用户在 App 内主动填写或生成的数据包括：</p>
+      <ul>
+        <li>工资规则：小时工资、加班倍率、夜班补贴、餐补和结算日。</li>
+        <li>排班信息：日期、班次、上下班时间、岗位和提醒时间。</li>
+        <li>记工信息：上班时间、下班时间、正常工时、加班工时、补贴、扣款、预支和备注。</li>
+        <li>工资核对信息：本月应发、已发、未发、每日明细和对账单文本。</li>
+      </ul>
+      <p>上述数据仅用于在本机完成排班提醒、记工、工资估算、工资对账和本月 CSV 对账表复制。</p>
+
+      <h2>二、本地存储</h2>
+      <p>第一版 App 使用 HarmonyOS 本地数据库保存用户填写的数据。数据默认只保存在当前设备内，不会同步到云端，也不会发送给开发者或第三方。</p>
+      <p>如果用户卸载 App、清除应用数据或更换设备，本地数据可能会被删除。第一版暂不提供云备份能力。</p>
+
+      <h2>三、系统权限说明</h2>
+      <p>第一版 App 仅在用户设置班次提醒时申请以下权限：</p>
+      <ul>
+        <li><code>ohos.permission.READ_CALENDAR</code>：用于读取由本 App 写入的本地日历提醒，避免重复创建同一班次提醒。</li>
+        <li><code>ohos.permission.WRITE_CALENDAR</code>：用于把用户保存的班次写入本地日历，并根据用户设置的提前分钟数触发上班提醒。</li>
+      </ul>
+      <p>如果用户拒绝日历权限，App 仍可使用记工、排班和工资核对功能，但无法把班次写入系统日历提醒。</p>
+      <p>第一版 App 不申请通讯录、定位、相机、相册、麦克风、蓝牙、短信、通话记录或精确位置权限。</p>
+
+      <h2>四、第三方服务</h2>
+      <p>第一版 App 不接入广告 SDK、统计 SDK、社交分享 SDK、第三方支付 SDK 或后端接口。</p>
+      <p>后续版本如接入 Huawei IAP，仅用于高级版权益购买和恢复，不改变工时、工资、排班等业务数据本地保存的原则。接入前会同步更新隐私政策和应用内说明。</p>
+
+      <h2>五、对账单复制和外部分享</h2>
+      <p>App 支持把本月工资对账单复制到系统剪贴板。复制后，用户可自行粘贴到微信、备忘录、表格或其他应用中。粘贴到其他应用后的数据处理将由对应应用负责，请用户自行确认分享范围。</p>
+
+      <h2>六、未成年人使用</h2>
+      <p>本 App 是记工、排班和工资核对工具，不面向儿童提供专门服务。未成年人如需使用，应在监护人同意和指导下使用。</p>
+
+      <h2>七、用户权利</h2>
+      <p>用户可以在 App 内修改工资规则、排班和记工记录。用户也可以通过系统设置清除应用数据或卸载 App，以删除本机保存的数据。</p>
+      <p>第一版数据仅保存在用户设备内，开发者无法远程查看、修改或删除用户本机数据。</p>
+
+      <h2>八、政策更新</h2>
+      <p>如后续版本新增账号、云同步、备份恢复、IAP、统计分析或其他需要处理个人信息的能力，我们会在更新版本前同步修订本隐私政策，并在必要时通过应用内或应用市场说明提示用户。</p>
+
+      <h2>九、联系我们</h2>
+      <p>如对本隐私政策或数据处理方式有疑问，请通过应用市场开发者联系方式与我们联系。</p>
+    </article>
+  </main>
+</body>
+</html>
